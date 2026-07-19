@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HomeTogether — Stay Close, Right Through the TV</title>
+<meta name="description" content="HomeTogether turns any TV into an easy, secure way for seniors to video call family and get gentle daily check-ins — no smartphone, no complicated tech. $129.99, then $29.99/mo. 30-day risk-free trial, free shipping.">
+<link rel="canonical" href="https://tryhometogether.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HomeTogether — Stay Close, Right Through the TV">
+<meta property="og:description" content="Easy, secure video calling and gentle wellness check-ins for seniors — right on the TV they already use. 30-day risk-free trial.">
+<meta property="og:url" content="https://tryhometogether.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FCF8F1; --panel:#FFFFFF; --panel-warm:#FBEFE0;
+    --ink:#2B2630; --muted:#6E6675; --faint:#9A93A0;
+    --sea:#1F7A8C;            /* trust / connection */
+    --sea-deep:#155A68;
+    --honey:#F0A63A;          /* warmth / CTA */
+    --honey-deep:#D98A1C;
+    --rose:#F3D9C6;
+    --border:#EAE2D6;
+    --good:#2C8A5B; --good-bg:#E3F3EA;
+    --shadow:0 2px 6px rgba(43,38,48,.05), 0 16px 40px rgba(43,38,48,.07);
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--sans);background:var(--ivory);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{transition:none!important;animation:none!important;}}
+  a{color:var(--sea-deep);text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;color:var(--ink);margin:0;text-wrap:balance;}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:800;
+       font-size:17px;border-radius:14px;padding:15px 26px;border:none;cursor:pointer;text-decoration:none;transition:transform .12s ease,box-shadow .12s ease,background .15s ease;}
+  .btn-primary{background:var(--honey);color:#3a2708;box-shadow:0 6px 18px rgba(240,166,58,.35);}
+  .btn-primary:hover{background:var(--honey-deep);transform:translateY(-1px);color:#3a2708;}
+  .btn-ghost{background:transparent;color:var(--sea-deep);border:2px solid var(--sea);}
+  .btn-ghost:hover{background:#EAF4F6;}
+  .btn-lg{font-size:19px;padding:17px 32px;}
+
+  /* header */
+  header.site{position:sticky;top:0;z-index:40;background:rgba(252,248,241,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  header.site .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink);}
+  .brand .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--sea),var(--sea-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;}
+  .brand .tm{font-size:12px;color:var(--faint);vertical-align:super;}
+  nav.main{display:flex;align-items:center;gap:26px;}
+  nav.main a{color:var(--muted);font-weight:600;font-size:15.5px;}
+  nav.main a:hover{color:var(--ink);}
+  .hdr-cta{display:inline-flex;}
+  .burger{display:none;}
+  @media (max-width:860px){ nav.main{display:none;} .hdr-cta .btn{padding:11px 18px;font-size:15px;} }
+
+  /* hero */
+  .hero{padding:56px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--panel-warm);color:var(--honey-deep);font-weight:800;font-size:13px;letter-spacing:.03em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(34px,5.2vw,54px);line-height:1.04;}
+  .hero h1 .u{color:var(--sea);}
+  .hero p.sub{font-size:20px;color:var(--muted);margin:20px 0 28px;max-width:34ch;}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .hero .price-note{font-size:15px;color:var(--muted);margin-top:16px;}
+  .hero .price-note b{color:var(--ink);}
+  .trust-row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;}
+  .trust-row span{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:var(--sea-deep);}
+  .trust-row .ck{color:var(--good);font-weight:900;}
+
+  /* TV mock */
+  .tv-scene{position:relative;}
+  .tv{background:#20242b;border-radius:18px;padding:14px;box-shadow:var(--shadow);}
+  .tv-screen{background:linear-gradient(160deg,#2C6E8F,#1F7A8C 60%,#155A68);border-radius:8px;aspect-ratio:16/10;padding:16px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;}
+  .call-strip{display:flex;gap:10px;flex:1;}
+  .face{flex:1;border-radius:10px;background:rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;border:1px solid rgba(255,255,255,.18);}
+  .ava{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#20242b;font-family:var(--sans);}
+  .face small{font-weight:700;font-size:13px;opacity:.95;}
+  .call-bar{display:flex;align-items:center;justify-content:center;gap:14px;background:rgba(0,0,0,.22);border-radius:10px;padding:9px;}
+  .cbtn{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .tv-stand{width:120px;height:12px;background:#20242b;border-radius:0 0 8px 8px;margin:0 auto;}
+  .tv-neck{width:16px;height:22px;background:#20242b;margin:0 auto;}
+  .float-badge{position:absolute;background:var(--panel);border-radius:14px;box-shadow:var(--shadow);padding:12px 15px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px;}
+  .float-badge .ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;}
+  .fb1{top:-14px;right:-10px;} .fb2{bottom:24px;left:-22px;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;gap:32px;} .hero p.sub{max-width:none;} .fb2{left:-4px;} }
+
+  /* generic section */
+  section{padding:60px 0;}
+  .sec-eyebrow{text-align:center;color:var(--honey-deep);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px;}
+  .sec-title{text-align:center;font-size:clamp(27px,3.6vw,38px);line-height:1.12;margin:0 auto 14px;max-width:16ch;}
+  .sec-lede{text-align:center;color:var(--muted);font-size:18px;max-width:60ch;margin:0 auto 40px;}
+
+  .band{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .band-warm{background:linear-gradient(180deg,#FDF3E6,#FBEFE0);}
+
+  /* problem */
+  .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .prob{background:var(--ivory);border:1px solid var(--border);border-radius:16px;padding:26px 24px;text-align:center;}
+  .prob .big{font-family:var(--serif);font-size:38px;font-weight:700;color:var(--sea);line-height:1;margin-bottom:8px;}
+  .prob p{margin:0;color:var(--muted);font-size:15.5px;}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .step{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow);position:relative;}
+  .step .n{position:absolute;top:-16px;left:26px;width:36px;height:36px;border-radius:50%;background:var(--sea);color:#fff;font-family:var(--serif);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .step .ic{font-size:30px;margin:6px 0 12px;}
+  .step h3{font-size:20px;margin-bottom:8px;}
+  .step p{margin:0;color:var(--muted);font-size:15.5px;}
+
+  /* features */
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .feat{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px;}
+  .feat .ic{width:46px;height:46px;border-radius:12px;background:var(--panel-warm);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;}
+  .feat h3{font-size:18px;margin-bottom:6px;}
+  .feat p{margin:0;color:var(--muted);font-size:15px;}
+  @media (max-width:860px){ .prob-grid,.steps,.feat-grid{grid-template-columns:1fr;} }
+
+  /* pricing */
+  .price-card{max-width:520px;margin:0 auto;background:var(--panel);border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;}
+  .price-head{background:linear-gradient(135deg,var(--sea),var(--sea-deep));color:#fff;padding:28px 30px;text-align:center;}
+  .price-head .dev{font-family:var(--serif);font-size:46px;font-weight:700;line-height:1;}
+  .price-head .dev small{font-size:18px;font-weight:600;opacity:.85;}
+  .price-head .then{margin-top:8px;font-size:16px;opacity:.92;font-weight:600;}
+  .price-body{padding:26px 30px 30px;}
+  .price-body ul{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .price-body li{display:flex;gap:11px;align-items:flex-start;font-size:16px;}
+  .price-body li .ck{color:var(--good);font-weight:900;flex:0 0 auto;}
+  .price-body .btn{width:100%;}
+  .price-fine{text-align:center;color:var(--faint);font-size:13.5px;margin-top:14px;}
+  .checkout-slot{margin-top:6px;}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:0 auto;}
+  details.q{background:var(--panel);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
+  details.q summary{list-style:none;cursor:pointer;padding:20px 22px;font-family:var(--serif);font-weight:600;font-size:18.5px;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  details.q summary::-webkit-details-marker{display:none;}
+  details.q summary .pm{color:var(--honey-deep);font-size:22px;flex:0 0 auto;transition:transform .15s ease;}
+  details.q[open] summary .pm{transform:rotate(45deg);}
+  details.q .a{padding:0 22px 20px;color:var(--muted);font-size:16px;}
+
+  /* final cta */
+  .final{background:linear-gradient(135deg,var(--sea-deep),var(--sea));color:#fff;text-align:center;border-radius:26px;padding:56px 30px;}
+  .final h2{color:#fff;font-size:clamp(28px,4vw,40px);margin-bottom:14px;}
+  .final p{color:rgba(255,255,255,.9);font-size:19px;max-width:44ch;margin:0 auto 28px;}
+
+  footer.site{padding:44px 0 60px;color:var(--muted);font-size:14.5px;border-top:1px solid var(--border);margin-top:40px;}
+  footer.site .frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;}
+  footer.site a{color:var(--muted);}
+  footer.site a:hover{color:var(--ink);}
+  .todo{background:#FFF7E6;border:1px dashed var(--honey-deep);border-radius:12px;padding:14px 16px;font-size:14px;color:#7a5410;margin-top:14px;text-align:left;}
+  .todo b{color:#5a3d0a;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap row">
+    <a class="brand" href="#top"><span class="mark">📺</span>HomeTogether<span class="tm">™</span></a>
+    <nav class="main">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <span class="hdr-cta"><a href="#pricing" class="btn btn-primary">Start free trial</a></span>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">📞 TV video calling for seniors</span>
+      <h1>Stay close, right through <span class="u">the TV</span>.</h1>
+      <p class="sub">HomeTogether turns the TV your loved one already uses into an easy, secure way to video call family and get gentle daily check‑ins. No smartphone. No new gadgets to learn.</p>
+      <div class="cta-row">
+        <a href="#pricing" class="btn btn-primary btn-lg">Start your 30‑day free trial</a>
+        <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
+      </div>
+      <p class="price-note"><b>$129.99</b> one‑time, then <b>$29.99/mo</b> · Free shipping · Cancel anytime</p>
+      <div class="trust-row">
+        <span><span class="ck">✓</span> No smartphone needed</span>
+        <span><span class="ck">✓</span> Works on any TV</span>
+        <span><span class="ck">✓</span> 30‑day risk‑free</span>
+      </div>
+    </div>
+    <div class="tv-scene">
+      <div class="tv">
+        <div class="tv-screen">
+          <div class="call-strip">
+            <div class="face"><span class="ava" style="background:#F0A63A">M</span><small>Mom</small></div>
+            <div class="face"><span class="ava" style="background:#8FD1C7">S</span><small>Sarah</small></div>
+            <div class="face"><span class="ava" style="background:#F3B0A0">L</span><small>Little Leo</small></div>
+          </div>
+          <div class="call-bar">
+            <span class="cbtn" style="background:#fff;color:#1F7A8C">🎤</span>
+            <span class="cbtn" style="background:#fff;color:#1F7A8C">📷</span>
+            <span class="cbtn" style="background:#E2554B;color:#fff">✕</span>
+          </div>
+        </div>
+      </div>
+      <div class="tv-neck"></div><div class="tv-stand"></div>
+      <div class="float-badge fb1"><span class="ic" style="background:var(--good-bg)">💚</span>Wellness check: All good today</div>
+      <div class="float-badge fb2"><span class="ic" style="background:#EAF4F6">🔔</span>“Time for your medication, Mom”</div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-warm" style="padding:44px 0;">
+  <div class="wrap">
+    <div class="prob-grid">
+      <div class="prob"><div class="big">1 in 4</div><p>older adults is considered socially isolated — which affects health as much as it affects the heart.</p></div>
+      <div class="prob"><div class="big">Miles apart</div><p>Families want to stay close, but distance, busy lives, and complicated tech get in the way.</p></div>
+      <div class="prob"><div class="big">The TV</div><p>is the one screen almost every senior is already comfortable using — every single day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="sec-eyebrow">Up and running in minutes</p>
+    <h2 class="sec-title">Simple enough for anyone. Really.</h2>
+    <p class="sec-lede">There's nothing for your loved one to set up or figure out. You handle the easy part once, and HomeTogether takes care of the rest.</p>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><div class="ic">🔌</div><h3>Plug it into the TV</h3><p>The HomeTogether device connects to any TV's HDMI port — the same kind of plug a streaming stick uses.</p></div>
+      <div class="step"><span class="n">2</span><div class="ic">📶</div><h3>Connect to Wi‑Fi</h3><p>A quick one‑time setup gets it online. After that, it stays ready — no logins or updates for your senior to manage.</p></div>
+      <div class="step"><span class="n">3</span><div class="ic">👋</div><h3>Call on the TV</h3><p>Family calls appear right on the screen. Your loved one just sees your face and says hello — that's it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="features">
+  <div class="wrap">
+    <p class="sec-eyebrow">What's inside</p>
+    <h2 class="sec-title">Connection and peace of mind, together</h2>
+    <p class="sec-lede">More than a video call — a gentle way to stay close and know your loved one is okay.</p>
+    <div class="feat-grid">
+      <div class="feat"><div class="ic">📞</div><h3>Effortless video calls</h3><p>Big, clear faces on the TV. Calls can answer automatically for loved ones who can't work a remote.</p></div>
+      <div class="feat"><div class="ic">👨‍👩‍👧</div><h3>The whole family</h3><p>Group calls so grandkids, siblings, and caregivers can all be on screen at once.</p></div>
+      <div class="feat"><div class="ic">💚</div><h3>Gentle wellness awareness</h3><p>Quiet, non‑intrusive check‑ins give the family reassurance that everything's alright — without hovering.</p></div>
+      <div class="feat"><div class="ic">🔔</div><h3>Reminders on screen</h3><p>Friendly, scheduled nudges for medications, appointments, and meals appear right on the TV.</p></div>
+      <div class="feat"><div class="ic">📱</div><h3>Family companion app</h3><p>You manage contacts, schedule calls, and stay in the loop from your own phone — the senior never has to.</p></div>
+      <div class="feat"><div class="ic">🔒</div><h3>Private &amp; secure</h3><p>Calls are encrypted and private. Only the people you approve can ever connect.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div style="max-width:820px;margin:0 auto;text-align:center;">
+      <p class="sec-eyebrow">More care for less</p>
+      <h2 class="sec-title" style="max-width:22ch;">The perfect companion to in‑home care</h2>
+      <p class="sec-lede" style="margin-bottom:8px;">Pair HomeTogether with a few hours of hands‑on help and you get whole‑day peace of mind — a caregiver for the moments that need hands, and HomeTogether keeping you connected and watchful the rest of the day, for a fraction of the cost of round‑the‑clock care.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band-warm" id="pricing">
+  <div class="wrap">
+    <p class="sec-eyebrow">Simple pricing</p>
+    <h2 class="sec-title">One device. One low monthly plan.</h2>
+    <p class="sec-lede">Try it risk‑free for 30 days. If it's not right for your family, send it back — no questions asked.</p>
+    <div class="price-card">
+      <div class="price-head">
+        <div class="dev">$129.99<small> device</small></div>
+        <div class="then">then $29.99/month · cancel anytime</div>
+      </div>
+      <div class="price-body">
+        <ul>
+          <li><span class="ck">✓</span> HomeTogether device (plugs into any TV)</li>
+          <li><span class="ck">✓</span> Unlimited family video calls</li>
+          <li><span class="ck">✓</span> Wellness check‑ins &amp; on‑screen reminders</li>
+          <li><span class="ck">✓</span> Family companion app included</li>
+          <li><span class="ck">✓</span> Free shipping &amp; guided setup support</li>
+          <li><span class="ck">✓</span> 30‑day risk‑free trial</li>
+        </ul>
+
+        <!-- ============================================================
+             STRIPE CHECKOUT GOES HERE
+             Samantha: in your Stripe Dashboard, create a Product with a
+             one-time $129.99 charge + a $29.99/mo subscription (add a
+             30-day free trial on the subscription if you want), then
+             create a "Buy Button" and paste its two PUBLIC values below.
+             Replace the placeholder button with:
+
+             <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+             <stripe-buy-button
+               buy-button-id="buy_btn_XXXXXXXXXXXX"
+               publishable-key="pk_live_XXXXXXXXXXXX">
+             </stripe-buy-button>
+
+             (Both values are safe to expose publicly. Never paste a
+             key that starts with sk_ — that one stays secret.)
+        ============================================================ -->
+        <div class="checkout-slot">
+          <a href="#" class="btn btn-primary btn-lg" id="checkout-btn">Start my 30‑day free trial</a>
+        </div>
+        <p class="price-fine">Secure checkout powered by Stripe · Cancel anytime in one tap</p>
+        <div class="todo no-live"><b>Setup note (remove before launch):</b> this button is a placeholder until your Stripe Buy Button is pasted into the marked spot in the code. Send me your <b>buy-button-id</b> and <b>publishable key</b> and I'll wire it in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="sec-eyebrow">Good to know</p>
+    <h2 class="sec-title">Questions families ask</h2>
+    <div class="faq">
+      <details class="q" open><summary>Does my parent need a smartphone or computer? <span class="pm">+</span></summary><div class="a">No. That's the whole point. Your loved one only needs their TV. You manage everything — contacts, scheduling, settings — from the companion app on your own phone.</div></details>
+      <details class="q"><summary>How hard is it to set up? <span class="pm">+</span></summary><div class="a">It plugs into an HDMI port on the TV (like a streaming stick) and connects to Wi‑Fi with a simple one‑time setup. We include step‑by‑step instructions and a support team to help. After setup, it's automatic for the senior.</div></details>
+      <details class="q"><summary>Can the whole family be on a call? <span class="pm">+</span></summary><div class="a">Yes — group calls let grandkids, siblings, and caregivers all join at once, right on the big screen.</div></details>
+      <details class="q"><summary>Is it private and secure? <span class="pm">+</span></summary><div class="a">Yes. Calls are encrypted, and only the family and caregivers you approve can ever connect to the device.</div></details>
+      <details class="q"><summary>What if my loved one can't work a remote? <span class="pm">+</span></summary><div class="a">Calls from approved family can answer automatically, so all your loved one has to do is look at the screen and say hello.</div></details>
+      <details class="q"><summary>What does it cost, and can I cancel? <span class="pm">+</span></summary><div class="a">The device is $129.99 one‑time, then $29.99/month for the service. Shipping is free, and you can try it risk‑free for 30 days. Cancel the monthly plan anytime.</div></details>
+      <details class="q"><summary>What do I need at home for it to work? <span class="pm">+</span></summary><div class="a">Just a TV with an HDMI port and a broadband Wi‑Fi connection. That's it.</div></details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Bring your family closer today.</h2>
+      <p>Give your loved one connection, and give yourself peace of mind — starting this week.</p>
+      <a href="#pricing" class="btn btn-primary btn-lg">Start your 30‑day free trial</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap frow">
+    <div>
+      <div class="brand" style="font-size:19px;margin-bottom:8px;"><span class="mark" style="width:28px;height:28px;font-size:15px;">📺</span>HomeTogether™</div>
+      <div>Keeping older loved ones healthy and connected — simply, through the TV.</div>
+    </div>
+    <div style="text-align:right;">
+      <div><a href="#how">How it works</a> · <a href="#features">Features</a> · <a href="#pricing">Pricing</a> · <a href="#faq">FAQ</a></div>
+      <div style="margin-top:8px;color:var(--faint);">Support: <span class="todo-inline">[add phone &amp; email]</span> · &copy; 2026 HomeTogether</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
