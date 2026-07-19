@@ -24,10 +24,23 @@
     <input type="checkbox" id="ht-navtog" class="ht-navtog" aria-hidden="true" tabindex="-1">
     <label for="ht-navtog" class="ht-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
     <nav class="main">
-      <a href="#visits">Virtual visits</a>
+      <span class="ht-group">
+        <a href="#visits" class="ht-top">Virtual care<i class="ht-caret"></i></a>
+        <span class="ht-dd">
+          <a href="#visits">Virtual visits</a>
+          <a href="#visit-pricing">Build your plan<span class="ht-dd-sub">Pick tasks &amp; see your price</span></a>
+          <a href="#safety">Safety &amp; alerts</a>
+        </span>
+      </span>
       <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
+      <span class="ht-group">
+        <a href="#features" class="ht-top">The device<i class="ht-caret"></i></a>
+        <span class="ht-dd">
+          <a href="#features">What you get</a>
+          <a href="#pricing">Device &amp; pricing</a>
+          <a href="#faq">Common questions</a>
+        </span>
+      </span>
       <a href="about.html">About</a>
       <a href="help.html">Help</a>
     </nav>
@@ -39,7 +52,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">📞 Real caregivers + family, on the TV</span>
+      <span class="eyebrow"><span style="color:transparent;text-shadow:0 0 0 var(--sea);">📞</span> Real caregivers + family, on the TV</span>
       <h1>Stay close, right through <span class="u">the TV</span>.</h1>
       <p class="sub">The TV your loved one already uses becomes two things: an easy way to video‑call family, and daily check‑ins from a real, caring professional. No smartphone. No new gadgets to learn.</p>
       <div class="cta-row">
@@ -169,6 +182,10 @@
       <div class="step"><span class="n">2</span><div class="ic">📶</div><h3>Connect to Wi‑Fi</h3><p>A quick one‑time setup gets it online. After that, it stays ready, no logins or updates for your senior to manage.</p></div>
       <div class="step"><span class="n">3</span><div class="ic">👋</div><h3>Call on the TV</h3><p>Family calls appear right on the screen. Your loved one just sees your face and says hello, that's it.</p></div>
     </div>
+    <div style="max-width:680px;margin:30px auto 0;background:var(--soft-teal);border-radius:14px;padding:18px 22px;display:flex;gap:14px;align-items:flex-start;">
+      <div style="font-size:22px;line-height:1;color:transparent;text-shadow:0 0 0 var(--sea);">📶</div>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:var(--ink);"><strong style="color:var(--heading);">No home Wi‑Fi? No problem.</strong> If your loved one doesn't have broadband internet at home, you can add a plug‑and‑play internet device to your order for an additional charge, and HomeTogether works without it.</p>
+    </div>
   </div>
 </section>
 
@@ -179,7 +196,7 @@
     <p class="sec-lede">No boxes of cables, no confusing manuals. HomeTogether arrives ready to go.</p>
     <div class="specs-grid">
       <div class="spec-card">
-        <h3>📦 In the box</h3>
+        <h3><span class="bi">📦</span> In the box</h3>
         <ul class="spec-list">
           <li>The HomeTogether device</li>
           <li>HDMI &amp; power connection</li>
@@ -188,10 +205,10 @@
         </ul>
       </div>
       <div class="spec-card">
-        <h3>🏠 All you need at home</h3>
+        <h3><span class="bi">🏠</span> All you need at home</h3>
         <ul class="spec-list">
           <li>A TV with an HDMI port</li>
-          <li>Broadband Wi‑Fi</li>
+          <li>Broadband Wi‑Fi <span style="color:var(--muted)">(or add our internet device)</span></li>
           <li>That's it, we handle the rest</li>
         </ul>
       </div>
@@ -302,7 +319,7 @@
       </div>
       <div class="price-body">
         <div class="cc-offer">
-          <div class="cc-offer-tag">💙 Caring Companions families</div>
+          <div class="cc-offer-tag"><span class="bi">💙</span> Caring Companions families</div>
           <div class="cc-offer-price">Half off, <b>$75/month</b></div>
           <p>Already have virtual visits or in‑home caregiving with Caring Companions? Your HomeTogether plan is half price.</p>
         </div>
