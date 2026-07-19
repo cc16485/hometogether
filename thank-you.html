@@ -8,86 +8,64 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ivory:#FCF8F1; --panel:#FFFFFF; --panel-warm:#FBEFE0;
-    --ink:#2B2630; --muted:#6E6675; --faint:#9A93A0;
-    --sea:#1F7A8C; --sea-deep:#155A68; --honey:#F0A63A; --honey-deep:#D98A1C;
-    --rose:#F3D9C6; --border:#EAE2D6; --good:#2C8A5B; --good-bg:#E3F3EA;
-    --shadow:0 2px 6px rgba(43,38,48,.05), 0 16px 40px rgba(43,38,48,.07);
-    --serif:'Fraunces',Georgia,serif;
-    --sans:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;font-family:var(--sans);background:var(--ivory);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
-  a{color:var(--sea-deep);}
-  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0;text-wrap:balance;}
-  header.site{border-bottom:1px solid var(--border);background:var(--ivory);}
-  header.site .row{display:flex;align-items:center;justify-content:center;padding:16px 0;}
-  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink);}
-  .brand .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--sea),var(--sea-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;}
-  .brand .tm{font-size:12px;color:var(--faint);vertical-align:super;}
-  .hero{text-align:center;padding:56px 0 20px;}
-  .check{width:74px;height:74px;border-radius:50%;background:var(--good-bg);color:var(--good);display:flex;align-items:center;justify-content:center;font-size:38px;margin:0 auto 22px;}
-  .hero h1{font-size:clamp(30px,5vw,42px);line-height:1.08;margin-bottom:12px;}
-  .hero p.sub{font-size:19px;color:var(--muted);margin:0 auto;max-width:46ch;}
-  .card{background:var(--panel);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:28px 30px;margin:34px 0;}
-  .card h2{font-size:22px;margin-bottom:20px;}
-  .steps{display:flex;flex-direction:column;gap:18px;}
-  .step{display:flex;gap:16px;align-items:flex-start;}
-  .step .n{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--sea);color:#fff;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;}
-  .step h3{font-size:17.5px;margin-bottom:3px;}
-  .step p{margin:0;color:var(--muted);font-size:15.5px;}
-  .support{background:var(--panel-warm);border:1px solid var(--rose);border-radius:16px;padding:22px 24px;text-align:center;}
-  .support h3{font-size:18px;margin-bottom:6px;}
-  .support p{margin:0;color:var(--muted);font-size:15.5px;}
-  .support a{font-weight:700;}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:17px;border-radius:14px;padding:15px 28px;text-decoration:none;background:var(--honey);color:#3a2708;box-shadow:0 6px 18px rgba(240,166,58,.35);}
-  .btn:hover{background:var(--honey-deep);}
-  .center{text-align:center;}
-  footer.site{padding:36px 0 56px;color:var(--faint);font-size:14px;text-align:center;}
-  .todo{background:#FFF7E6;border:1px dashed var(--honey-deep);border-radius:12px;padding:13px 16px;font-size:13.5px;color:#7a5410;margin:0 auto 8px;max-width:560px;}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="site">
   <div class="wrap row">
     <a class="brand" href="index.html"><span class="mark">📺</span>HomeTogether<span class="tm">™</span></a>
+    <nav class="main">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Help</a>
+    </nav>
+    <span class="hdr-cta"><a href="index.html#pricing" class="btn btn-primary">Start free trial</a></span>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
+<section style="padding:56px 0 16px;text-align:center;">
+  <div class="wrap narrow">
     <div class="check">✓</div>
-    <h1>Welcome to the family.</h1>
-    <p class="sub">Your order is confirmed — and you just made staying close a whole lot easier. Here's what happens next.</p>
+    <h1 style="font-size:clamp(30px,5vw,42px);line-height:1.08;">Welcome to the family.</h1>
+    <p style="font-size:19px;color:var(--muted);margin:14px auto 0;max-width:46ch;">Your order is confirmed — and you just made staying close a whole lot easier. Here's what happens next.</p>
   </div>
 </section>
 
-<div class="wrap">
+<div class="wrap narrow" style="padding-bottom:20px;">
   <div class="card">
-    <h2>What happens now</h2>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><div><h3>Your device ships free</h3><p>We're packing your HomeTogether now. You'll get a confirmation email with tracking, and it'll arrive ready to go.</p></div></div>
-      <div class="step"><span class="n">2</span><div><h3>Set it up in minutes</h3><p>Plug it into the TV's HDMI port and connect to Wi‑Fi using the simple included guide. Prefer a hand? Our team will walk you through it.</p></div></div>
-      <div class="step"><span class="n">3</span><div><h3>Add your family &amp; make the first call</h3><p>Download the companion app to manage contacts and schedule calls — then say hello on the big screen.</p></div></div>
+    <h2 style="font-size:22px;margin-bottom:20px;">What happens now</h2>
+    <div class="steps-v">
+      <div class="step-v"><span class="n">1</span><div><h3>Your device ships free</h3><p>We're packing your HomeTogether now. You'll get a confirmation email with tracking, and it'll arrive ready to go.</p></div></div>
+      <div class="step-v"><span class="n">2</span><div><h3>Set it up in minutes</h3><p>Plug it into the TV's HDMI port and connect to Wi‑Fi using the simple included guide. Prefer a hand? Our team will walk you through it.</p></div></div>
+      <div class="step-v"><span class="n">3</span><div><h3>Add your family &amp; make the first call</h3><p>Download the companion app to manage contacts and schedule calls — then say hello on the big screen.</p></div></div>
     </div>
   </div>
 
   <div class="support">
     <h3>Questions? We're here to help.</h3>
     <p>Our support team is happy to help with setup or anything else.<br>
-    <a href="#" data-support-phone>[add support phone]</a> &nbsp;·&nbsp; <a href="#" data-support-email>[add support email]</a></p>
-    <div class="todo" style="margin-top:14px;"><b>Setup note (remove before launch):</b> add the real support phone &amp; email here and in the footer.</div>
+    <a href="#" data-support-phone style="font-weight:700;">[add support phone]</a> &nbsp;·&nbsp; <a href="#" data-support-email style="font-weight:700;">[add support email]</a></p>
+    <div class="todo" style="margin:14px auto 0;max-width:520px;"><b>Setup note (remove before launch):</b> add the real support phone &amp; email here, on the Help page, and in the footer.</div>
   </div>
 
-  <p class="center" style="margin:34px 0 10px;"><a class="btn" href="index.html">Back to HomeTogether</a></p>
+  <p class="center" style="margin:34px 0 10px;"><a class="btn btn-primary" href="index.html">Back to HomeTogether</a></p>
 </div>
 
 <footer class="site">
-  &copy; 2026 HomeTogether™ · Keeping older loved ones healthy and connected.
+  <div class="wrap frow">
+    <div>
+      <div class="brand" style="font-size:19px;margin-bottom:8px;"><span class="mark" style="width:28px;height:28px;font-size:15px;">📺</span>HomeTogether™</div>
+      <div>Keeping older loved ones healthy and connected — simply, through the TV.</div>
+    </div>
+    <div style="text-align:right;">
+      <div><a href="index.html#how">How it works</a> · <a href="index.html#features">Features</a> · <a href="index.html#pricing">Pricing</a> · <a href="about.html">About</a> · <a href="help.html">Help</a></div>
+      <div style="margin-top:8px;color:var(--faint);">Support: <span>[add phone &amp; email]</span> · &copy; 2026 HomeTogether</div>
+    </div>
+  </div>
 </footer>
+
 </body>
 </html>
