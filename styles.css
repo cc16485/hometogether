@@ -1,6 +1,7 @@
 :root{
     --ivory:#FCF8F1; --panel:#FFFFFF; --panel-warm:#FBEFE0;
     --ink:#2B2630; --muted:#6E6675; --faint:#9A93A0;
+    --heading:#0D365F;        /* navy logo blue — matches mo-care */
     --sea:#1F7A8C;            /* trust / connection */
     --sea-deep:#155A68;
     --honey:#F0A63A;          /* warmth / CTA */
@@ -18,7 +19,7 @@
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{transition:none!important;animation:none!important;}}
   a{color:var(--sea-deep);text-decoration:none;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;color:var(--ink);margin:0;text-wrap:balance;}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;color:var(--heading);margin:0;text-wrap:balance;}
 
   /* buttons */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:800;
