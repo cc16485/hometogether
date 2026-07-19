@@ -61,6 +61,7 @@
 
   /* TV mock */
   .tv-scene{position:relative;}
+  .hero-photo{width:100%;height:auto;border-radius:16px;box-shadow:var(--shadow);display:block;}
   .tv{background:#20242b;border-radius:18px;padding:14px;box-shadow:var(--shadow);}
   .tv-screen{background:linear-gradient(160deg,#2C6E8F,#1F7A8C 60%,#155A68);border-radius:8px;aspect-ratio:16/10;padding:16px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;}
   .call-strip{display:flex;gap:10px;flex:1;}
